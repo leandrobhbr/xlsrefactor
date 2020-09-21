@@ -16,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/alunosAtivosGraPos', 'ExcelController@alunosAtivosGraPos');
+Route::get('/joao', 'ExcelController@joao');
+Route::get('/alunos', 'ExcelController@alunos');
+Route::get('/updatepg', 'ExcelController@limeUsersPG');
+Route::get('/updateis', 'ExcelController@limeUsersIS');
+Route::get('/answersexport', 'ExcelController@limeAnswersExport');
+Route::get('/surveysUniq', 'ExcelController@surveysUniq');
+Route::get('/coordenadores', 'ExcelController@coordenadores');
+Route::get('/taes', 'ExcelController@taes');
+Route::get('/credenciados', 'ExcelController@credenciados');
+Route::get('/naocredenciados', 'ExcelController@naocredenciados');
