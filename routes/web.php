@@ -25,5 +25,7 @@ Route::get('/surveysUniq', 'ExcelController@surveysUniq');
 Route::get('/discentes', 'ExcelController@discentes');
 Route::get('/posdoutoral', 'ExcelController@posdoutoral');
 Route::get('/pbh', 'ExcelController@pbh');
-
-
+Route::get('/coordenadores', 'ExcelController@coordenadores');
+Route::get('/taes', 'ExcelController@taes');
+Route::get('/credenciados', 'ExcelController@credenciados');
+Route::get('/naocredenciados', 'ExcelController@naocredenciados');

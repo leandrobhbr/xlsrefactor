@@ -37,6 +37,34 @@ class ExcelController extends Controller
         Excel::import($alunos, "disciplinaIsolada.xls");
         $dataArray = $alunos->getArrayLines();
         return Excel::download(new ExportSessionArray($dataArray), 'disciplinaIsolada.csv', \Maatwebsite\Excel\Excel::CSV);
+    }   
+
+    public function coordenadores(){
+        $coordenadores = new InAlunos();
+        Excel::import($coordenadores, "listaCoordenadores020920.xls");
+        $dataArray = $coordenadores->getArrayLines();
+        return Excel::download(new ExportSessionArray($dataArray), 'coordenadores080920.csv', \Maatwebsite\Excel\Excel::CSV);
+    }
+
+    public function taes(){
+        $taes = new InAlunos();
+        Excel::import($taes, "taes.xls");
+        $dataArray = $taes->getArrayLines();
+        return Excel::download(new ExportSessionArray($dataArray), 'taes140920.csv', \Maatwebsite\Excel\Excel::CSV);
+    }
+
+    public function credenciados(){
+        $credenciados = new InAlunos();
+        Excel::import($credenciados, "credenciados.xls");
+        $dataArray = $credenciados->getArrayLines();
+        return Excel::download(new ExportSessionArray($dataArray), 'credenciados210920.csv', \Maatwebsite\Excel\Excel::CSV);
+    }
+
+    public function naocredenciados(){
+        $naocredenciados = new InAlunos();
+        Excel::import($naocredenciados, "naocredenciados.xls");
+        $dataArray = $naocredenciados->getArrayLines();
+        return Excel::download(new ExportSessionArray($dataArray), 'naocredenciados210920.csv', \Maatwebsite\Excel\Excel::CSV);
     }
 
     public function joao(){

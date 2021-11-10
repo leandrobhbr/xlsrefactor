@@ -28,12 +28,14 @@ class InAlunos implements ToCollection{
            $nomeCompleto = $row[0];
            $login=$row[1];
            if($key == 0) { continue; } // primeira linha é cabeçalho original do arquivo
+           #dd($row);
            if(empty($login)) { continue; } // login vazio
            $firstname = $this->reuso->retornaFirstName($nomeCompleto);
            $lastname = $this->reuso->retornaLastName($nomeCompleto);
            $token = $this->reuso->retornaToken();
            $email = $this->reuso->retornaEmailMinhaUfmg($login);
            $linhas[$key] = ["$firstname","$lastname","$email","$token"];
+           #dd($linhas);
            $key++;
         }
         $this->arrayLines = $linhas;
