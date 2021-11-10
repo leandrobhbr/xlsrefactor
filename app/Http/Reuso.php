@@ -31,7 +31,12 @@ class Reuso extends Controller
     }
 
     public function retornaEmailMinhaUfmg($login){
-        return $login."@teste678.br";
+        return $login."@ufmg.br";
+    }
+
+    public function retornaLogin($email){
+        $texto = explode("@",$email);
+        return $texto[0];
     }
 
 }
